@@ -118,3 +118,6 @@ kubectl get nodes
 [<img src="Images/thumbnail.jpg" width="60%">](https://youtu.be/lzhOvDWBJoM)
 
 
+## Contributors
+
+Anusha and Shyra

@@ -31,12 +31,10 @@ sudo yum install python3-pip
 ```
 cd inventory
 ```
-5.	Make a copy of the sample folder using the following command 
+5.	Make a copy of the sample folder using the following command and name the new folder as sdapcluster
 ```
 cp -prf sample/ sdapcluster
 ```
-
-The new folder name is sdapcluster 
 
 Ensure the process worked by using `ls -ltr` the new folder should appear, then go into the new folder 
 ```
@@ -93,22 +91,19 @@ all:
 Note: If there are any authentication issues copy the base station ssh key and paste it in the master node’s authorized keys file.
 	 
 
-8.	Look into add-ons file it is inside inventory/sdapcluster/group_vars/k8s-cluster/
-```
-cd group_vars/k8s-cluster/
-```
-9.	Look for addons.yml. Open the file using:
+8.	Look for addons.yml file it inside inventory/sdapcluster/group_vars/k8s-cluster/
 ```
 vi addons.yml
 ```
+
 Make sure two variables helm_enable and ingress_nginx_enable set as true and then save file.
 
-10.	Run the accessible playbook to run the kubernetes cluster. Make sure you are inside kubespray folder to run the below command:
+9.	Run the accessible playbook to run the kubernetes cluster. Make sure you are inside kubespray folder to run the below command:
 ```
 ansible-playbook -i inventory/sdapcluster/host.yml cluster.yml –become –become-user=root
 ```
 
-11.	Once process finish ssh into kubernetes master node, and check status of the nodes 
+10.	Once process finish ssh into kubernetes master node, and check status of the nodes 
 Login as a root user 
 ```
 sude su -l

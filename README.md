@@ -1,5 +1,3 @@
-# SDAP-K8Cluster
-
 # Setting up the SDAP Kubernetes Cluster 
 
 To begin you must be in a base station.
@@ -87,10 +85,12 @@ all:
 ```
 
 7.	Now check you can connect base station to the kubernetes cluster master node using
+
 ```
  <ssh `your specified ip address`>
 ```
-	Note: If there are any authentication issues copy the base station ssh key and paste it in the master node’s authorized keys file.
+	
+Note: If there are any authentication issues copy the base station ssh key and paste it in the master node’s authorized keys file.
 	 
 
 8.	Look into add-ons file it is inside inventory/sdapcluster/group_vars/k8s-cluster/
